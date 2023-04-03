@@ -1,0 +1,7 @@
+# Ignore node_modules folder
+node_modules
+
+# Ignore SASS configuration files
+.sass-cache
+
+.DS_store
