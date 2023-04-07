@@ -398,3 +398,47 @@ h3 {
 .main-navigation a:hover {
   color: #FEF460;
 }
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background: rgb(118, 3, 249);
+  background: linear-gradient(270deg, rgba(118, 3, 249, 0.5018382353) 0%, rgba(255, 0, 108, 0.1) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video video {
+  width: auto;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.video-content {
+  z-index: 10;
+}
+.video-content h2 {
+  color: #FFFFFF;
+  font-size: 7rem;
+  margin: 0;
+}
+.video-content p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
+}
