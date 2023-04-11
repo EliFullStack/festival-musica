@@ -51,15 +51,22 @@ function avifVersion(callback) {
     callback();
 }
 
-function dev(callback) {
-
-    watch('src/scss/**/*.scss', css);
+function javascript(callback) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
 
     callback();
 }
 
+function dev(callback) {
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javascript);
+    callback();
+}
+
 exports.css = css;
+exports.js = javascript;
 exports.images = images;
 exports.webpVersion = webpVersion;
 exports.avifVersion = avifVersion;
-exports.dev = parallel(images, webpVersion, avifVersion, dev);
+exports.dev = parallel(images, webpVersion, avifVersion, javascript, dev);
