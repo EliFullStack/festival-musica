@@ -322,6 +322,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.attach-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -589,4 +592,35 @@ img {
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay picture {
+  display: block;
+  max-width: 75rem;
+}
+
+.close-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.close-btn:hover {
+  cursor: pointer;
 }

@@ -13,6 +13,10 @@ html {
 body {
     font-family: v.$main_font;
     font-size: 1.6rem; // or 16 px
+
+    &.attach-body {
+        overflow: hidden;
+    }
 }
 
 p {
