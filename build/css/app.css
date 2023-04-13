@@ -325,6 +325,9 @@ body {
 body.attach-body {
   overflow: hidden;
 }
+body.body-scroll {
+  padding-top: 8.6rem;
+}
 
 p {
   font-size: 2rem;
@@ -367,6 +370,15 @@ img {
 
 .header {
   background-color: #4CBBB3;
+}
+@media (min-width: 768px) {
+  .header.fixed {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.2rem 0.2rem 0.2rem #555;
+  }
 }
 .header h1 {
   color: #FFFFFF;
