@@ -14,6 +14,9 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
+//Javascript
+const terser = require('gulp-terser');
+
 //compile style sheet
 function css(callback) {
     src('src/scss/**/*.scss') //identify SASS file
@@ -59,6 +62,9 @@ function avifVersion(callback) {
 
 function javascript(callback) {
     src('src/js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/js'));
 
     callback();
